@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,7 +10,7 @@ public class Main {
         Scanner myscan = new Scanner(System.in);
 
         int eingabe, max = 100, min = 1, rngcpu;
-        String gok;
+        String gok = null;
         Random rng = new Random();
         boolean schleife = true;
 
@@ -26,7 +28,19 @@ public class Main {
             System.out.println("____________________________________");
             System.out.println("(k)leiner (g)rößer (o) Treffer");
 
-            gok = myscan.next();
+//            while (schleife) {
+//                gok = myscan.next();
+//                if (gok.equals("o")) {
+//                    schleife = false;
+//                } else if (gok.equals("k") && rngcpu > eingabe) {
+//                    schleife = false;
+//                } else if (gok.equals("g") && rngcpu < eingabe) {
+//                    schleife = false;
+//                } else {
+//                    System.out.println("Fehleingabe, nochmal!");
+//                }
+//            }
+
 
             if (gok.equals("o") && rngcpu == eingabe) {
                 System.out.println("Der Computer hat die Zahl erraten");
